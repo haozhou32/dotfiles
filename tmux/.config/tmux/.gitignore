@@ -1,0 +1,8 @@
+# Ignore all plugins by default
+plugins/
+
+# Ignore tmux resurrect sessions
+resurrect/
+
+# Ignore any log files
+*.log
