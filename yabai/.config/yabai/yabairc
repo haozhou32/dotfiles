@@ -49,6 +49,7 @@ disabled_apps=(
     "^System Settings$"
     "^Calculator$"
     "^zoom.us$"
+    "^Stickies$"
 ) # use "yabai -m query --windows" to obtain the name of the apps
 
 for app in "${disabled_apps[@]}"; do

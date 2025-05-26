@@ -123,6 +123,9 @@ alt - return : open -na "kitty"
 # Close window 
 alt - x: yabai -m window --close
 
+# Minimize focused window
+alt - m : yabai -m window --minimize
+
 # Toggle float mode
 alt - d : yabai -m window --toggle float
 # Toggle zoom-parent (expands within its parent container)
