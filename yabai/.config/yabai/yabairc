@@ -13,7 +13,7 @@
 
 # global settings
 yabai -m config                                 \
-    external_bar                 off:40:0       \
+    external_bar                 all:32:0       \
     menubar_opacity              1.0            \
     mouse_follows_focus          off            \
     focus_follows_mouse          off            \
@@ -37,7 +37,7 @@ yabai -m config                                 \
     bottom_padding               12             \
     left_padding                 12             \
     right_padding                12             \
-    window_gap                   06             \
+    window_gap                   09             \
     layout                       bsp            \
     mouse_modifier               alt            \
     mouse_action1                move           \
