@@ -80,7 +80,6 @@ source "$ITEM_DIR/spotify.sh"
 # Right
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/battery.sh"
-source "$ITEM_DIR/external_drive.sh"
 source "$ITEM_DIR/airpods_status.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/qq_music.sh"
