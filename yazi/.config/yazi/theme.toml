@@ -1,0 +1,183 @@
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# Catppuccin Mocha, matching kitty/.config/kitty/current-theme.conf.
+# The terminal's default background is retained so Kitty's opacity still applies.
+
+[app]
+overall = { fg = "#cdd6f4" }
+
+[mgr]
+cwd = { fg = "#94e2d5", bold = true }
+
+find_keyword  = { fg = "#f9e2af", bold = true, italic = true, underline = true }
+find_position = { fg = "#f5c2e7", bg = "reset", bold = true, italic = true }
+
+symlink_target = { fg = "#a6adc8", italic = true }
+
+marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
+marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
+marker_marked   = { fg = "#94e2d5", bg = "#94e2d5" }
+marker_selected = { fg = "#cba6f7", bg = "#cba6f7" }
+
+count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
+count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
+count_selected = { fg = "#1e1e2e", bg = "#cba6f7" }
+
+border_symbol = "│"
+border_style  = { fg = "#585b70" }
+
+[tabs]
+active   = { fg = "#11111b", bg = "#cba6f7", bold = true }
+inactive = { fg = "#cdd6f4", bg = "#181825" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#11111b", bg = "#cba6f7", bold = true }
+normal_alt  = { fg = "#cba6f7", bg = "#313244" }
+
+select_main = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
+select_alt  = { fg = "#a6e3a1", bg = "#313244" }
+
+unset_main = { fg = "#1e1e2e", bg = "#f5e0dc", bold = true }
+unset_alt  = { fg = "#f5e0dc", bg = "#313244" }
+
+[indicator]
+parent  = { fg = "#1e1e2e", bg = "#b4befe" }
+current = { fg = "#1e1e2e", bg = "#cba6f7" }
+preview = { fg = "#1e1e2e", bg = "#89b4fa" }
+padding = { open = "", close = "" }
+
+[status]
+overall   = {}
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_sep   = { fg = "#585b70" }
+perm_type  = { fg = "#89b4fa" }
+perm_read  = { fg = "#f9e2af" }
+perm_write = { fg = "#f38ba8" }
+perm_exec  = { fg = "#a6e3a1" }
+
+progress_label  = { fg = "#cdd6f4", bold = true }
+progress_normal = { fg = "#a6e3a1", bg = "#45475a" }
+progress_error  = { fg = "#f9e2af", bg = "#f38ba8" }
+
+[which]
+cols            = 3
+mask            = { bg = "#181825" }
+cand            = { fg = "#94e2d5" }
+rest            = { fg = "#6c7086" }
+desc            = { fg = "#f5c2e7" }
+separator       = "  "
+separator_style = { fg = "#585b70" }
+
+[confirm]
+border     = { fg = "#cba6f7" }
+title      = { fg = "#cba6f7", bold = true }
+body       = { fg = "#cdd6f4" }
+list       = { fg = "#bac2de" }
+btn_yes    = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
+btn_no     = { fg = "#1e1e2e", bg = "#f38ba8", bold = true }
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+[spot]
+border   = { fg = "#cba6f7" }
+title    = { fg = "#cba6f7", bold = true }
+tbl_col  = { fg = "#89b4fa", bold = true }
+tbl_cell = { fg = "#f9e2af", reversed = true }
+
+[notify]
+title_info  = { fg = "#a6e3a1" }
+title_warn  = { fg = "#f9e2af" }
+title_error = { fg = "#f38ba8" }
+
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+[pick]
+border   = { fg = "#cba6f7" }
+active   = { fg = "#f5c2e7", bold = true }
+inactive = { fg = "#a6adc8" }
+
+[input]
+border   = { fg = "#cba6f7" }
+title    = { fg = "#cdd6f4" }
+value    = { fg = "#cdd6f4" }
+selected = { fg = "#1e1e2e", bg = "#f5e0dc" }
+
+[cmp]
+border   = { fg = "#cba6f7" }
+active   = { fg = "#1e1e2e", bg = "#cba6f7" }
+inactive = { fg = "#a6adc8" }
+
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+[tasks]
+border  = { fg = "#cba6f7" }
+title   = { fg = "#cdd6f4" }
+hovered = { fg = "#f5c2e7", bold = true }
+
+[help]
+on      = { fg = "#94e2d5" }
+run     = { fg = "#f5c2e7" }
+desc    = { fg = "#a6adc8" }
+hovered = { fg = "#cdd6f4", bg = "#585b70", bold = true }
+footer  = { fg = "#cdd6f4", bg = "#45475a" }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#f9e2af" },
+	{ mime = "{audio,video}/*", fg = "#f5c2e7" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f38ba8" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#74c7ec" },
+	{ mime = "vfs/{absent,stale}", fg = "#6c7086" },
+	{ url = "*", is = "orphan", fg = "#f38ba8" },
+	{ url = "*", is = "exec", fg = "#a6e3a1" },
+	{ url = "*", is = "dummy", fg = "#f38ba8" },
+	{ url = "*/", is = "dummy", fg = "#f38ba8" },
+	{ url = "*/", fg = "#cba6f7" },
+]
+
+[icon]
+# Replace the default mixed-color icon set with a small semantic palette.
+globs = [
+	{ url = "*.{jpg,jpeg,png,gif,bmp,webp,avif,heic,svg,ico}", text = "", fg = "#f9e2af" },
+	{ url = "*.{mp3,flac,wav,m4a,aac,ogg,opus}", text = "", fg = "#f5c2e7" },
+	{ url = "*.{mp4,mkv,mov,avi,webm,m4v}", text = "", fg = "#f5c2e7" },
+	{ url = "*.{zip,rar,7z,tar,gz,bz2,xz,zst}", text = "", fg = "#f38ba8" },
+	{ url = "*.{pdf,doc,docx,odt,rtf}", text = "󰈙", fg = "#74c7ec" },
+	{ url = "*.{md,markdown,txt,org,rst}", text = "󰂺", fg = "#f5e0dc" },
+	{ url = "*.{toml,yaml,yml,json,jsonc,ini,conf,xml}", text = "", fg = "#b4befe" },
+	{ url = "*.{c,cpp,h,hpp,rs,go,py,js,jsx,ts,tsx,lua,sh,zsh,bash,fish,rb,java,kt,swift,jl}", text = "", fg = "#89b4fa" },
+]
+
+dirs = [
+	{ name = ".config", text = "", fg = "#cba6f7" },
+	{ name = ".git", text = "", fg = "#cba6f7" },
+	{ name = ".github", text = "", fg = "#cba6f7" },
+	{ name = "Desktop", text = "", fg = "#cba6f7" },
+	{ name = "Documents", text = "", fg = "#cba6f7" },
+	{ name = "Downloads", text = "", fg = "#cba6f7" },
+	{ name = "Library", text = "", fg = "#cba6f7" },
+	{ name = "Movies", text = "", fg = "#cba6f7" },
+	{ name = "Music", text = "", fg = "#cba6f7" },
+	{ name = "Pictures", text = "", fg = "#cba6f7" },
+	{ name = "Public", text = "", fg = "#cba6f7" },
+]
+
+files = []
+exts = []
+
+conds = [
+	{ if = "orphan", text = "", fg = "#f38ba8" },
+	{ if = "link", text = "", fg = "#b4befe" },
+	{ if = "block | char | fifo | sock | sticky", text = "", fg = "#f9e2af" },
+	{ if = "dir", text = "", fg = "#cba6f7" },
+	{ if = "exec", text = "", fg = "#a6e3a1" },
+	{ if = "!dir", text = "", fg = "#cdd6f4" },
+]
