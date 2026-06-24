@@ -1,13 +1,13 @@
 #!/bin/bash
 yabai -m window --toggle float
 
-yabai_float=$(yabai -m query --windows --window | jq .floating)
+yabai_float=$(yabai -m query --windows --window | jq '."is-floating"')
 
 case "$yabai_float" in
-    0)
-    sketchybar -m --set yabai_float label=""
+    false)
+    sketchybar -m --set yabai_float label="􀏠" label.font="SF Pro:SemiBold:16.0"
     ;;
-    1)
-    sketchybar -m --set yabai_float label=""
+    true)
+    sketchybar -m --set yabai_float label="􀫝" label.font="SF Pro:SemiBold:16.0"
     ;;
 esac

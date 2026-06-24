@@ -6,7 +6,23 @@ Catppuccin Mocha theme as Kitty.
 
 ## Setup
 
-Clone the dotfiles repository to `~/dotfiles`, then run:
+Clone the dotfiles repository, then run its installer:
+
+```sh
+cd ~/dotfiles
+./install.sh
+```
+
+The installer supports macOS only and uses Homebrew. It installs Kitty, tmux,
+Yazi, Yabai, skhd, SketchyBar, their dependencies, and Sioyek when its cask is
+available; applies their Stow packages; and adds the required shell
+configuration to `~/.zshrc`. Homebrew and GNU Stow are installed automatically
+when absent.
+
+On Linux, install the packages listed below using your distribution's package
+manager, then apply the Stow package manually.
+
+To configure Yazi without running the full installer, run:
 
 ```sh
 cd ~/dotfiles

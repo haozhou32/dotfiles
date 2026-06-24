@@ -1,4 +1,4 @@
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+#:schema https://yazi-rs.github.io/schemas/theme.json
 
 # Catppuccin Mocha, matching kitty/.config/kitty/current-theme.conf.
 # The terminal's default background is retained so Kitty's opacity still applies.
