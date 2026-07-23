@@ -1,0 +1,52 @@
+# Claude Code global ignore patterns
+# Files matching these patterns are excluded from context gathering.
+#
+# Override per-project by adding a .claudeignore in the project root.
+
+# Build artifacts
+dist/
+build/
+*.min.js
+*.min.css
+*.bundle.*
+
+# Dependencies
+node_modules/
+vendor/
+.bundle/
+
+# Generated code
+*.generated.*
+*.pb.*
+*_pb2.py
+
+# Large or binary files
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.otf
+*.mp4
+*.mov
+*.avi
+*.dmg
+*.pkg
+*.so
+*.dylib
+*.dll
+
+# IDE and OS metadata
+.DS_Store
+*.swp
+*.swo
+*~

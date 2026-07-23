@@ -1,0 +1,55 @@
+{
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true
+  },
+  "effortLevel": "xhigh",
+  "editorMode": "vim",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(uv:*)",
+      "Bash(latexmk:*)",
+      "Bash(pdflatex:*)",
+      "Bash(xelatex:*)",
+      "Bash(lualatex:*)",
+      "Bash(pytest:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(echo:*)",
+      "Bash(which:*)",
+      "Bash(command:*)",
+      "Bash(jq:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(curl:* | bash:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(brew install:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/clean-latex-aux.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

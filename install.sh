@@ -195,6 +195,31 @@ install_sketchybar() {
   echo "SketchyBar is installed, configured, and running."
 }
 
+install_claude() {
+  #################### CLAUDE CODE ####################
+  # Claude Code uses ~/.claude/ directly (not ~/.config/claude/).
+
+  brew install --cask claude-code
+
+  if [[ ! -d "$HOME/.claude" ]]; then
+    echo "Claude Code installation succeeded but ~/.claude was not found." >&2
+    exit 1
+  fi
+
+  # Remove default files that Claude Code created so stow can replace
+  # them with symlinks into the dotfiles package.
+  for file in settings.json; do
+    local target="$HOME/.claude/$file"
+    if [[ -f "$target" ]] && [[ ! -L "$target" ]]; then
+      rm "$target"
+    fi
+  done
+
+  stow_package claude
+
+  echo "Claude Code is configured."
+}
+
 main() {
   require_macos
   install_homebrew
@@ -205,6 +230,7 @@ main() {
   install_sioyek
   install_window_manager
   install_sketchybar
+  install_claude
 
   echo
   echo "Installation complete."
