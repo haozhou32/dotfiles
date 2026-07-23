@@ -1,12 +1,5 @@
 {
-  "model": "opus[1m]",
-  "enabledPlugins": {
-    "document-skills@anthropic-agent-skills": true
-  },
-  "effortLevel": "xhigh",
-  "editorMode": "vim",
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(uv:*)",
       "Bash(latexmk:*)",
@@ -37,8 +30,10 @@
       "Bash(curl:* | bash:*)",
       "Bash(rm -rf /:*)",
       "Bash(brew install:*)"
-    ]
+    ],
+    "defaultMode": "acceptEdits"
   },
+  "model": "opus[1m]",
   "hooks": {
     "PostToolUse": [
       {
@@ -51,5 +46,19 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true,
+    "frontend-slides@frontend-slides": true
+  },
+  "extraKnownMarketplaces": {
+    "frontend-slides": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/zarazhangrui/frontend-slides.git"
+      }
+    }
+  },
+  "effortLevel": "xhigh",
+  "editorMode": "vim"
 }
