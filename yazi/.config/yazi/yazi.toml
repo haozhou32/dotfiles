@@ -27,6 +27,9 @@ image_quality = 80
 edit = [
 	{ run = "${EDITOR:-vi} %s", desc = "$EDITOR", for = "unix", block = true },
 ]
+play = [
+	{ run = "mpv %s", desc = "Play with mpv", for = "unix", orphan = true },
+]
 open = [
 	{ run = "open %s", desc = "Open", for = "macos" },
 	{ run = "xdg-open %s1", desc = "Open", for = "linux", orphan = true },

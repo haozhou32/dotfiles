@@ -104,7 +104,7 @@ install_terminal() {
 install_yazi() {
   #################### YAZI ####################
   brew install \
-    yazi ffmpeg sevenzip poppler fd ripgrep fzf zoxide resvg imagemagick
+    yazi mpv ffmpeg sevenzip poppler fd ripgrep fzf zoxide resvg imagemagick
   brew install --cask font-symbols-only-nerd-font
 
   stow_package yazi

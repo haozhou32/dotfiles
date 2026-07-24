@@ -41,13 +41,14 @@ Recommended dependencies:
 | `ripgrep` (`rg`) | File-content search |
 | `fzf` | Interactive file and directory jump |
 | `pdftoppm` | PDF previews |
+| `mpv` | Default audio and video player |
 | Kitty | Best match for the configured theme and image previews |
 | `xdg-utils` | Opening files on Linux with `xdg-open` |
 
 On macOS, these can be installed with Homebrew:
 
 ```sh
-brew install yazi stow fd ripgrep fzf poppler
+brew install yazi stow fd ripgrep fzf poppler mpv
 ```
 
 On Linux, use the equivalent packages from your distribution.
